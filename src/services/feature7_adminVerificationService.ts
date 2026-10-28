@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * FITUR 7 (Developer 4): Verifikasi Laporan Masuk & Pembaruan Status Penanganan Admin
  */
@@ -26,4 +27,12 @@ export const adminVerificationService = {
       timeline: [...report.timeline, { date: "Baru saja", title: `Status penanganan: ${nextStatus}`, note: progressNote?.trim() || `Status penanganan diperbarui menjadi ${nextStatus}.` }],
     };
   },
+=======
+import { HandlingStatus, Report } from "../types/waterwatch";
+// TUGAS FADIL: Isi kode implementasi asli di sini
+export const adminVerificationService = {
+  async approveReport(report: Report): Promise<Report> { return report; },
+  async rejectReport(report: Report, reason: string): Promise<Report> { return report; },
+  async updateHandlingStatus(report: Report, nextStatus: HandlingStatus, progressNote?: string): Promise<Report> { return report; },
+>>>>>>> 89807a4defc6477ec575185fabac8862f8224d9c
 };

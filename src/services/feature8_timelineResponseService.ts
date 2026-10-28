@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * FITUR 8 (Developer 4): Riwayat Status & Tanggapan Admin CRUD
  */
@@ -17,4 +18,12 @@ export const timelineResponseService = {
     if (!USE_MOCK_API) await apiRequest(`/admin/reports/${report.id}/responses/${responseIndex}`, { method: "DELETE" });
     return { ...report, adminResponses: report.adminResponses.filter((_, idx) => idx !== responseIndex) };
   },
+=======
+import { Report, TimelineEntry } from "../types/waterwatch";
+// TUGAS FADIL: Isi kode implementasi asli di sini
+export const timelineResponseService = {
+  async getReportTimeline(report: Report): Promise<TimelineEntry[]> { return report.timeline; },
+  async addAdminResponse(report: Report, message: string): Promise<Report> { return report; },
+  async deleteAdminResponse(report: Report, responseIndex: number): Promise<Report> { return report; },
+>>>>>>> 89807a4defc6477ec575185fabac8862f8224d9c
 };
